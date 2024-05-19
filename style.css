@@ -443,7 +443,7 @@ body {
     .场景 {
         background-image: url(image/场景.png);
         background-repeat: no-repeat;
-        background-size: cover;
+        background-size:50vw 300px;
         background-position: center;
         width: 50vw;
         height: 300px;
@@ -453,7 +453,7 @@ body {
         display: block;
         background-image: url(image/我.png);
         background-repeat: no-repeat;
-        background-size: cover;
+        background-size:50vw 300px;
         background-position: center;
         width: 50vw;
         height: 300px;
@@ -463,9 +463,10 @@ body {
     .敌人 {
         background-image: url(image/敌人.png);
         background-repeat: no-repeat;
-        background-size: cover;
-        background-position: center;
+        background-size:cover;
+        background-position:center;
         background-position-y: 50px;
+        background-position-x: -200px;
         width: 50vw;
         height: 300px;
         animation: fade 2s linear forwards;
@@ -557,8 +558,8 @@ body {
     
     
     .攻击 , .防御 , .回血 {
-        width: 100px;
-        height: 75px;
+        width: 80px;
+        height: 55px;
         border: none;
         background-color: white;
     
