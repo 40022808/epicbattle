@@ -35,13 +35,16 @@ function getRandomInt(min, max) {
 
 var HP = 100
 var boss_HP = 100
+var 伤害 = 10
+var boss_伤害 = 10
 
 
 攻击.addEventListener("click",()=>{
     cd()
     var 失去的血量 = parseFloat(getComputedStyle(boss).height);
     var 血量上限 = parseFloat(getComputedStyle(boss_data).height);
-    var decreaseAmount = getRandomInt(5,15); // 改变这个值来调整每次攻击减少的血量
+    var decreaseAmount = getRandomInt(伤害,2 * 伤害); // 改变这个值来调整每次攻击减少的血量
+    console.log(decreaseAmount)
     var 目前血量 = boss_HP - decreaseAmount;
     boss_HP = 目前血量
     目前血量 = 目前血量 / 100
@@ -90,7 +93,7 @@ function 失败() {
 function 敌人行动() {
     var 失去的血量 = parseFloat(getComputedStyle(me).height);
     var 血量上限 = parseFloat(getComputedStyle(me_data).height);
-    var decreaseAmount = getRandomInt(5,15); // 改变这个值来调整每次攻击减少的血量
+    var decreaseAmount = getRandomInt(boss_伤害,2 * boss_伤害); // 改变这个值来调整每次攻击减少的血量
     var 目前血量 = HP - decreaseAmount;
     HP = 目前血量
     目前血量 = 目前血量 / 100
